@@ -47,91 +47,65 @@
 
  html,body{
    overflow-x: hidden;
+   max-width: 100%;
+   width: 100%;
  }
 
+  /* ======== HEADERS & NAVIGATION ========= */
 
- /* =========================
-    HEADER & NAVIGATION
- ========================= */
 
-.main_header{
-  position: absolute;
-  z-index: 1000;
-  width: 100%;
-  padding: 15px;
+header{
+  width: 90%;
+  background-color: #122B11;
+  margin: 0 auto;
+  padding-top: 30px;
+
+  .hamburger{
+    float: right;
+  }
 }
 
 
-/* =========================
-  HERO - INTRO SECTION
-========================= */
-
+/* ======== HERO ========= */
 
 .hero{
-
-  .hero__overlay{
-    width: 100%;
-    height: 600px;
-    position: absolute;
-    opacity: 0.68;
-    background-image: linear-gradient(-180deg, #FF206E 3%, #44BBA4 100%);
-  }
-
-  figure{
-    width: 100%;
-    height: 600px;
-    left: 0px;
-    margin: 0px;
-  }
-
-  h1,p{
-    color: #fff;
-    z-index: 4000;
-  }
-}
-
-.hero_content{
-  position: absolute;
-  width: 50%;
-  left: 10%;
-  top: 35%;
-}
-
-
-/* =========================
-  LAYOUT
-========================= */
-
-.page_container{
-
-}
-
-
-/* =========================
-  BLOG LISTING
-========================= */
-
-.blog-listing{
   display: grid;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: 150px 150px;
+  grid-template-columns: 70% 30%;
+  height: 200px;
+  width: 100%;
 
-  width: 95%;
-  margin: 0 auto;
-  background-color: blue;
+  .big-post{
+    background-color: blue;
+    padding: 30px;
 
-  .blog-item{
-    background-color: red;
-    padding: 10px;
+    .post-item{
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 600px;
+      position: relative;
+    }
+  }
+
+  .hero-listing{
+    background-color: purple;
+    height: 50px;
   }
 }
 
+/* ======== POSTS & POST LISTINGS ========= */
 
-/* =========================
-  BLOG SINGLE PAGE
-========================= */
+.post-item__content{
+ background-color: rgba(118, 190, 208, 0.6);
+ position: absolute;
+ bottom: 0;
+ padding: 10px;
+}
 
+ /* ======== LAYOUTS ========= */
 
-/* =========================
-  BLOG COMMENTS
-========================= */
+.boxy-layout{
+  width: 90%;
+  background-color: red;
+  height: 900px;
+  margin: 0 auto;
+}

@@ -3,42 +3,63 @@
  * Front page template
  *
  * @package Quantum-Shock
- * @author Red Isotope
- * @link http://wwww.redisotope.com
+ * @author Nearlake Media
+ * @link http://wwww.nearlakemedia.com
  */
 
   get_header();
 ?>
 
-    <main class="page_container">
+    <main class="main-element">
 
-      <div class="hero">
-        <div class="hero_content">
-          <h1>HOW TO MAINTAIN A HAPPY STREAK?</h1>
-          <p>Lorem Ipsum Doloret</p>
+      <div class="boxy-layout">
+
+        <div class="hero">
+
+          <div class="big-post">
+
+            <div class="post-item" style="background-image:url(<?php echo get_template_directory_uri() . '/img/temp/post1.jpg' ?>);">
+              <div class="post-item__content">
+                <h2>Bubbles in newtonian liquids</h2>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                   sed do eiusmod tempor incididunt ut labore et dolore m…</p>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="hero-listing">
+            <div class="">
+
+            </div>
+
+            <div class="">
+
+            </div>
+
+            <div class="">
+
+            </div>
+          </div>
+
         </div>
 
-        <div class="hero__overlay"></div>
-        <figure style="background-image: url(<?php echo get_template_directory_uri() . '/img/temp/hero.jpg'; ?>);"></figure>
+        <section class="below-hero">
+
+          <div class="blog-listing">
+
+          </div>
+          
+
+          <aside class="">
+
+          </aside>
+
+        </section>
+
       </div>
-
-      <section class="blog-listing">
-
-        <article class="blog-item">
-          <div class="item_overlay"></div>
-          <img src="<?php //echo get_template_directory_uri() . '/img/temp/post1.jpg' ?>" alt="">
-
-        </article>
-
-        <article class="blog-item">
-          <div class="item_overlay"></div>
-          <img src="<?php //echo get_template_directory_uri() . '/img/temp/post2.jpg' ?>" alt="">
-
-        </article>
-
-      </section>
-
-
 
 
     </main>
