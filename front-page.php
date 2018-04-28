@@ -31,16 +31,16 @@
           </div>
 
           <div class="hero-listing">
-            <div class="">
-
+            <div class="post-item">
+              <a href="#"><h2>Bubbles in newtonian liquids</h2></a>
             </div>
 
-            <div class="">
-
+            <div class="post-item">
+              <a href="#"><h2>Bubbles in newtonian liquids</h2></a>
             </div>
 
-            <div class="">
-
+            <div class="post-item">
+              <a href="#"><h2>Bubbles in newtonian liquids</h2></a>
             </div>
           </div>
 
@@ -51,7 +51,7 @@
           <div class="blog-listing">
 
           </div>
-          
+
 
           <aside class="">
 

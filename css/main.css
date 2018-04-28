@@ -50,7 +50,6 @@ html, body {
 /* ======== HEADERS & NAVIGATION ========= */
 header {
   width: 90%;
-  background-color: #122B11;
   margin: 0 auto;
   padding-top: 30px; }
   header .hamburger {
@@ -63,16 +62,19 @@ header {
   height: 200px;
   width: 100%; }
   .hero .big-post {
-    background-color: blue;
-    padding: 30px; }
+    background-color: blue; }
     .hero .big-post .post-item {
       background-size: cover;
       background-repeat: no-repeat;
-      height: 600px;
+      height: 540px;
       position: relative; }
   .hero .hero-listing {
-    background-color: purple;
     height: 50px; }
+    .hero .hero-listing .post-item {
+      height: 200px;
+      text-align: center;
+      background-image: url("../img/temp/post3.jpg");
+      background-size: cover; }
 
 /* ======== POSTS & POST LISTINGS ========= */
 .post-item__content {
