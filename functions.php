@@ -16,6 +16,8 @@ function qs_assets_load(){
   wp_enqueue_script('jquery');
   wp_enqueue_script('custom-js', get_template_directory_uri() . '/js/custom.js', false, filemtime( get_stylesheet_directory().'/js/custom.js' ), true);
   wp_enqueue_style('hamburger', get_template_directory_uri().'/assets/hamburgers/dist/hamburgers.min.css', false, false, false);
+  wp_enqueue_style('animate', get_template_directory_uri().'/assets/animatecss/animate.min.css', false, false, false);
+
 }
 
 

@@ -7,4 +7,10 @@ jQuery(function($) {
     // Do something else, like open/close menu
   });
 
+  /* ===== OVERLAY MENU ======= */
+
+  $('.hamburger').click(function(){
+    $('.qs-menu-overlay').css('display', 'block');
+  });
+
 });

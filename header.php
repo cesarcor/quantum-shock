@@ -16,6 +16,16 @@
 
     <body <?php body_class(); ?>>
 
+      <div class="qs-menu-overlay">
+        <nav class="overlay_nav" role="navigation">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Categories</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </nav>
+      </div>
+
         <header class="main_header">
 
             <?php
@@ -30,7 +40,3 @@
               </span>
             </button>
         </header>
-
-        <nav class="overlay_nav" role="navigation">
-
-        </nav>

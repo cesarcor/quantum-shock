@@ -20,28 +20,37 @@
 
             <div class="post-item" style="background-image:url(<?php echo get_template_directory_uri() . '/img/temp/post1.jpg' ?>);">
               <div class="post-item__content">
-                <h2>Bubbles in newtonian liquids</h2>
+                <h2><a href="#">Bubbles in newtonian liquids</a></h2>
 
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
                    sed do eiusmod tempor incididunt ut labore et dolore m…</p>
               </div>
-
             </div>
 
           </div>
 
           <div class="hero-listing">
+
             <div class="post-item">
-              <a href="#"><h2>Bubbles in newtonian liquids</h2></a>
+
+              <div class="post-overlay">
+                <h2><a href="#">Bubbles in newtonian liquids</a></h2>
+              </div>
+
             </div>
 
             <div class="post-item">
-              <a href="#"><h2>Bubbles in newtonian liquids</h2></a>
+              <div class="post-overlay">
+                <h2><a href="#">Bubbles in newtonian liquids</a></h2>
+              </div>
             </div>
 
             <div class="post-item">
-              <a href="#"><h2>Bubbles in newtonian liquids</h2></a>
+              <div class="post-overlay">
+                <h2><a href="#">Bubbles in newtonian liquids</a></h2>
+              </div>
             </div>
+
           </div>
 
         </div>
@@ -50,10 +59,34 @@
 
           <div class="blog-listing">
 
+            <article class="post-item">
+              <div class="post-overlay">
+                <div class="post-item-excerpt">
+                  <h2><a href="#">Bubbles in newtonian liquids</a></h2>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore m…
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="post-item">
+              <div class="post-overlay">
+                <div class="post-item-excerpt">
+                  <h2><a href="#">Bubbles in newtonian liquids</a></h2>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore m…
+                  </p>
+                </div>
+              </div>
+            </article>
+
           </div>
 
 
-          <aside class="">
+          <aside class="qs-sidebar">
 
           </aside>
 
@@ -63,9 +96,6 @@
 
 
     </main>
-
-
-
 
 
 <?php
