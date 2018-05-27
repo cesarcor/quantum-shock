@@ -12,6 +12,8 @@
 
       <link rel="stylesheet" href="<?php get_template_directory_uri().'/assets/hamburgers/dist/hamburgers.min.css' ?>">
 
+      <?php require('admin/customizer/option-setting.php'); ?>
+
     </head>
 
     <body <?php body_class(); ?>>

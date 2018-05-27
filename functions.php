@@ -1,7 +1,7 @@
 <?php
 
 $query_args = array(
-  'family' => 'Dosis:800',
+  'family' => 'Open+Sans:300,400,600i,700,800',
   'subset' => 'latin,latin-ext'
 );
 
@@ -24,3 +24,7 @@ function qs_assets_load(){
 /* ======= THEME SUPPORT ======= */
 
 add_theme_support( 'custom-logo' );
+
+/* ======= ICNLUDES ======= */
+
+include ('admin/customizer/customize.php');

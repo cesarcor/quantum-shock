@@ -11,6 +11,7 @@ jQuery(function($) {
 
   $('.hamburger').click(function(){
     $('.qs-menu-overlay').css('display', 'block');
+    $('body').css('position', 'fixed');
   });
 
 });

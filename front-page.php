@@ -18,13 +18,16 @@
 
           <div class="big-post">
 
-            <div class="post-item" style="background-image:url(<?php echo get_template_directory_uri() . '/img/temp/post1.jpg' ?>);">
+            <div class="post-item">
               <div class="post-item__content">
                 <h2><a href="#">Bubbles in newtonian liquids</a></h2>
 
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
                    sed do eiusmod tempor incididunt ut labore et dolore m…</p>
               </div>
+
+              <img src="<?php echo get_template_directory_uri() .  '/img/temp/post1.jpg'; ?>" alt="">
+
             </div>
 
           </div>
@@ -37,18 +40,24 @@
                 <h2><a href="#">Bubbles in newtonian liquids</a></h2>
               </div>
 
+              <img src="<?php echo get_template_directory_uri() .  '/img/temp/post1.jpg'; ?>" alt="">
             </div>
 
             <div class="post-item">
               <div class="post-overlay">
                 <h2><a href="#">Bubbles in newtonian liquids</a></h2>
               </div>
+
+              <img src="<?php echo get_template_directory_uri() .  '/img/temp/post3.jpg'; ?>" alt="">
             </div>
 
             <div class="post-item">
               <div class="post-overlay">
                 <h2><a href="#">Bubbles in newtonian liquids</a></h2>
               </div>
+
+              <img src="<?php echo get_template_directory_uri() .  '/img/temp/post4.jpg'; ?>" alt="">
+
             </div>
 
           </div>
