@@ -12,7 +12,7 @@
 
       <link rel="stylesheet" href="<?php get_template_directory_uri().'/assets/hamburgers/dist/hamburgers.min.css' ?>">
 
-      <?php require('admin/customizer/option-setting.php'); ?>
+      <?php require('funcs/customizations/core-changes.php'); ?>
 
     </head>
 

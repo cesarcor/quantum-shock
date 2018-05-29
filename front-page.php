@@ -66,31 +66,9 @@
 
         <section class="below-hero">
 
-          <div class="blog-listing">
+          <div class="blog-listing blocked-post-listing">
 
-            <article class="post-item">
-              <div class="post-overlay">
-                <div class="post-item-excerpt">
-                  <h2><a href="#">Bubbles in newtonian liquids</a></h2>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore m…
-                  </p>
-                </div>
-              </div>
-            </article>
-
-            <article class="post-item">
-              <div class="post-overlay">
-                <div class="post-item-excerpt">
-                  <h2><a href="#">Bubbles in newtonian liquids</a></h2>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore m…
-                  </p>
-                </div>
-              </div>
-            </article>
+              <?php get_template_part('template-parts/content/content', 'brick'); ?>
 
           </div>
 

@@ -131,6 +131,9 @@ header {
   margin-bottom: 15px; }
   .blog-listing .post-item h2 {
     font-size: 1.8rem;
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 10px; }
+  .blog-listing .post-item p {
     font-family: 'Open Sans', sans-serif; }
   .blog-listing .post-item .post-overlay {
     background-color: rgba(118, 190, 208, 0.8);

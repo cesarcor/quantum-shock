@@ -1,0 +1,36 @@
+@media only screen and (max-width: 480px){
+
+  .boxy-layout{
+    .hero{
+
+      display: block;
+
+      .big-post,
+      .hero-listing{
+        width: 100%;
+      }
+
+      .big-post{
+
+        margin-bottom: 25px;
+
+        .post-item{
+          height: 400px;
+          width: 100%;
+        }
+
+      }
+
+      .hero-listing{
+
+      }
+
+    }
+
+    .below-hero{
+      grid-template-columns: 100%;
+    }
+
+  }
+
+}
