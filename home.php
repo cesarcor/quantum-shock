@@ -12,7 +12,34 @@
 
 <?php
 
+  $listing_type;
   $qsset_listing_type = get_theme_mod('listing_type');
+
+  switch ($qsset_listing_type) {
+    case 'brick-listing-type':
+      $listing_type = 'brick-listing';
+      break;
+
+    case 'masonry-listing-type':
+      $listing_type = 'masonry-listing';
+    break;
+
+    case 'two-column-listing-type':
+      $listing_type = 'two-column-listing';
+    break;
+
+    case 'card-listing-type':
+      $listing_type = 'card-listing';
+    break;
+
+    case 'classic-listing-type':
+      $listing_type = 'classic-listing';
+    break;
+
+    default:
+      $listing_type = '';
+    break;
+  }
 
 ?>
 
@@ -72,21 +99,42 @@
 
         <section class="below-hero">
 
-          <div class="blog-listing blocked-post-listing">
+          <div class="blog-listing <?php echo $listing_type; ?>">
 
-            <?php if($qsset_listing_type == 'two-column-listing-type'): ?>
+            <?php
+            if ( have_posts() ):
+            	while ( have_posts() ):
+            		the_post();
+            ?>
 
-              <?php get_template_part('template-parts/content/content', 'twocolumns'); ?>
+            <?php
+              switch ($qsset_listing_type) {
+                case 'two-column-listing-type':
+                  get_template_part('template-parts/content/content', 'twocolumns');
+                break;
 
+                case 'masonry-listing-type':
+                  get_template_part('template-parts/content/content', 'masonry');
+                break;
+
+                case 'card-listing-type':
+                  get_template_part('template-parts/content/content', 'cards');
+                break;
+
+                case 'classic-listing-type':
+                  get_template_part('template-parts/content/content', 'classic');
+                break;
+
+                default:
+                  get_template_part('template-parts/content/content', 'brick');
+                break;
+              }
+            ?>
 
               <?php
-                else:
-              ?>
-
-              <?php get_template_part('template-parts/content/content', 'brick'); ?>
-
-
-            <?php endif; ?>
+            	endwhile;
+            endif;
+            ?>
 
           </div>
 

@@ -100,8 +100,11 @@ function qs_customize_hero( $wp_customize ) {
          'label' => __( 'Custom Radio Selection' ),
          'description' => __( 'This is a custom radio input.' ),
          'choices' => array(
-           'brick-listing-type' => __( 'Brick Listing Type' ),
-           'two-column-listing-type' => __( 'Two Column Listing Type' )
+           'brick-listing-type' => __( 'Brick Listing' ),
+           'two-column-listing-type' => __( 'Two Column Listing' ),
+           'classic-listing-type' => __( 'Classic Listing' ),
+           'masonry-listing-type' => __( 'Masonry Listing' ),
+           'card-listing-type' => __( 'Card Listing' )
          )
      ) );
 

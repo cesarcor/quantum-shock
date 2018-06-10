@@ -20,10 +20,17 @@ function qs_assets_load(){
 
 }
 
-
 /* ======= THEME SUPPORT ======= */
 
 add_theme_support( 'custom-logo' );
+add_theme_support( 'post-thumbnails' );
+
+/* ======= EXCERPT LENGTH ======= */
+
+add_filter( 'excerpt_length', 'qs_excerpt_length', 999 );
+function qs_excerpt_length( $length ) {
+	return 15;
+}
 
 /* ======= ICNLUDES ======= */
 
