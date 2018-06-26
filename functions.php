@@ -1,13 +1,12 @@
 <?php
 
-$query_args = array(
-  'family' => 'Open+Sans:300,400,600i,700,800',
-  'subset' => 'latin,latin-ext'
-);
-
-
 add_action('wp_enqueue_scripts', 'qs_assets_load');
 function qs_assets_load(){
+
+  $query_args = array(
+    'family' => 'Open+Sans:300,400,600i,700,800',
+    'subset' => 'latin,latin-ext'
+  );
 
 
   wp_enqueue_style( 'google_fonts', add_query_arg( $query_args, "//fonts.googleapis.com/css" ), array(), null );
@@ -19,6 +18,13 @@ function qs_assets_load(){
   wp_enqueue_style('animate', get_template_directory_uri().'/assets/animatecss/animate.min.css', false, false, false);
 
 }
+
+function qs_customize_enqueue() {
+	wp_enqueue_script( 'custom-customize-js', get_template_directory_uri() . '/admin/customizer/js/customizer-custom-js.js', array( 'jquery', 'customize-controls' ), false, true );
+  wp_enqueue_style('custom-customize-css', get_template_directory_uri().'/admin/customizer/css/customizer-custom-css.css', false, filemtime(get_stylesheet_directory().'/admin/customizer/css/customizer-custom-css.css'));
+
+}
+add_action( 'customize_controls_enqueue_scripts', 'qs_customize_enqueue' );
 
 /* ======= THEME SUPPORT ======= */
 
@@ -33,5 +39,4 @@ function qs_excerpt_length( $length ) {
 }
 
 /* ======= ICNLUDES ======= */
-
 include ('admin/customizer/customize.php');

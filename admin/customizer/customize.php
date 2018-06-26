@@ -1,7 +1,81 @@
 <?php
 
 function qs_customize_hero( $wp_customize ) {
-    // $wp_customize->add_panel();
+
+  if ( ! isset( $wp_customize ) ) {
+    return;
+  }
+
+  class qs_custom_img_control extends \WP_Customize_Control{
+
+    function render_conten(){
+
+      if (empty($this->choices))
+             return;
+
+         $name = '_customize-radio-' . $this->id;
+         ?>
+         <span class="customize-control-title"><?php echo esc_html($this->label); ?></span>
+         <ul class="controls" id='theme-slug-img-container'>
+             <?php
+             foreach ($this->choices as $value => $label) :
+                 $class = ($this->value() == $value) ? 'theme-slug-radio-img-selected theme-slug-radio-img-img' : 'theme-slug-radio-img-img';
+                 ?>
+                 <li style="display: inline;">
+                     <label>
+                         <input <?php $this->link(); ?>style = 'display:none' type="radio" value="<?php echo esc_attr($value); ?>" name="<?php echo esc_attr($name); ?>" <?php
+                                                       $this->link();
+                                                       checked($this->value(), $value);
+                                                       ?> />
+                         <img src='<?php echo esc_url($label); ?>' class='<?php echo esc_attr($class); ?>' />
+                     </label>
+                 </li>
+                 <?php
+             endforeach;
+             ?>
+         </ul>
+         <?php
+
+    }
+  }
+
+  /*
+
+    Blog Listing Type
+
+   */
+
+   $wp_customize->add_section(
+                     'blog_listing_settings', array(
+                       'title' => __('Blog Listing Settings'),
+                       'description' => __('Select type of layout'),
+                       'priority' => 60,
+                       'capability' => 'edit_theme_options'
+                     ));
+
+   $wp_customize->add_setting( 'listing_type', array(
+     'type' => 'theme_mod', // or 'option'
+     'capability' => 'edit_theme_options',
+     'default' => '',
+     'transport' => 'refresh', // or postMessage
+     'sanitize_callback' => '',
+     'sanitize_js_callback' => '', // Basically to_json.
+   ));
+
+//    $wp_customize->add_control(new qs_custom_img_control($wp_customize, 'listing_type', array(
+//    'type' => 'radio',
+//    'label' => esc_html__('Select default layout', 'theme-textdomain'),
+//    'section' => 'blog_listing_settings',
+//    'settings' => 'listing_type',
+//    'choices' => array(
+//        'brick-listing-type' => get_template_directory_uri() . '/admin/customizer/img/brick.jpg',
+//        'two-column-listing-type' => get_template_directory_uri() . '/admin/customizer/img/two-column.jpg',
+//        'classic-listing-type' => get_template_directory_uri() . '/admin/customizer/img/classic.jpg',
+//        'masonry-listing-type' => get_template_directory_uri() . '/admin/customizer/img/brick.jpg',
+//        'card-listing-type' => get_template_directory_uri() . '/admin/customizer/img/brick.jpg',
+//    )
+// )));
+
 
     /*
 
@@ -70,29 +144,6 @@ function qs_customize_hero( $wp_customize ) {
           'boxed-layout' => __( 'Boxed Layout' )
         )
     ) );
-
-    /*
-
-      Blog Listing Type
-
-     */
-
-     $wp_customize->add_section(
-                       'blog_listing_settings', array(
-                         'title' => __('Blog Listing Settings'),
-                         'description' => __('Select type of layout'),
-                         'priority' => 50,
-                         'capability' => 'edit_theme_options'
-                       ));
-
-     $wp_customize->add_setting( 'listing_type', array(
-       'type' => 'theme_mod', // or 'option'
-       'capability' => 'edit_theme_options',
-       'default' => '',
-       'transport' => 'refresh', // or postMessage
-       'sanitize_callback' => '',
-       'sanitize_js_callback' => '', // Basically to_json.
-     ));
 
      $wp_customize->add_control( 'listing_type', array(
          'type' => 'radio',
